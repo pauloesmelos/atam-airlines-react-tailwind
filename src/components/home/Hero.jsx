@@ -3,7 +3,7 @@ import Plane from "../../assets/plane.png";
 
 const Hero = () => {
   return (
-    <section className="w-full h-[100vh] bg-slate-900 relative">
+    <section className="w-full h-[100vh] bg-slate-900 relative overflow-hidden">
       <div className="w-full max-w-[1100px] mx-auto px-6 h-full flex flex-col items-center justify-center">
         {/* grid container hero and image */}
         <div className="w-full grid gap-14 md:grid-cols-2">
@@ -17,7 +17,7 @@ const Hero = () => {
                 <p className="text-sm text-neutral-400 max-w-[400px] text-justify leading-6 tracking-wider">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid natus odit necessitatibus alias itaque assumenda dignissimos minus.
                 </p>
-                <div className="flex items-center gap-8">
+                <div className="flex flex-col md:flex-row items-left gap-8">
                     <button className="bg-blue-400 text-black rounded-full px-6 py-3 text-center w-[140px] font-semibold
                     hover:shadow-md hover:shadow-blue-500 duration-200 ease-linear hover:scale-[1.04]">
                         Flight Now

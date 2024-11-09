@@ -12,11 +12,34 @@
         @apply bg-neutral-100
     }
 }
+.mask::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    mix-blend-mode: screen; /* propriedade que fez a imagem se pocionar sobre a máscara*/
+}
+.banner {
+    background-image: url('../assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 .animationLeft {
     animation: animateLeft 1.1s ease-in-out;
 }
 .animationRight {
     animation: animateRight 1.1s ease-in-out;
+}
+.animationPong {
+    animation: animatePong 1s infinite ease-in-out;
 }
 
 @keyframes animateLeft {
@@ -26,4 +49,9 @@
 @keyframes animateRight {
     from { margin-left: 50px; opacity: 0; }
     to { margin-right: 0px; opacity: 1; }
+}
+@keyframes animatePong {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }

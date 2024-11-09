@@ -2,6 +2,7 @@ import React from 'react';
 import { LuMenu } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { navLinks } from '../../data/data';
+import Menu from '../mobile/Menu';
 
 const Navbar = () => {
   const style = {
@@ -11,6 +12,12 @@ const Navbar = () => {
     }
   }
   const [links, setLinks] = React.useState([]);
+  const [mobile, setMobile] = React.useState(false);
+
+  const handleClick = () => {
+    setMobile(e => !e);
+  }
+
   React.useEffect(() => {
     setLinks(navLinks);
   }, []);
@@ -44,11 +51,15 @@ const Navbar = () => {
                     </button>
                 </div>
                 <div className="block md:hidden">
-                    <LuMenu className="text-3xl text-white hover:text-blue-400 cursor-pointer" />
+                    <LuMenu 
+                      onClick={handleClick} 
+                      className="text-3xl text-white hover:text-blue-400 cursor-pointer"
+                    />
                 </div>
             </div>
         </div>
       </nav>
+      <Menu isOpen={mobile} action={handleClick} links={links} />
     </header>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { features } from '../../data/data';
-import CardFeature from './CardFeature';
+import CardFeature from './cards/CardFeature';
 
 const Features = () => {
   const [allFeatures, setFeatures] = React.useState([]);
@@ -19,11 +19,11 @@ const Features = () => {
                 <h1 className="text-neutral-700 font-bold text-4xl">
                     Our Priceless Features
                 </h1>
-                <p className="text-sm text-neutral-500 max-w-[510px] text-center">
+                <p className="text-sm md:text-lg text-neutral-500 max-w-[510px] text-center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas praesentium, id blanditiis voluptates fugiat.
                 </p>
             </div>
-            <div className="grid grid-cols-3 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
                 {allFeatures.map((feature) => (
                     <CardFeature 
                         key={feature.id * Math.random()} 
