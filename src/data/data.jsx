@@ -116,7 +116,7 @@ export const blog = [
     {
         id: 1,
         img: "https://images.unsplash.com/photo-1504150558240-0b4fd8946624?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        user: "Jalin Raba",
+        user: "Jalin Houston",
         date: "Dez 25, 2024",
         title: "Most Visited Countries In Last 3 Years",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing parsing."
